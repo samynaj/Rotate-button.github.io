@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Buttton Slider</title>
+   	
+    <style type="text/css">
+
+    	.clock {
+    		width: 100px;
+    		height: 50px;
+    		color: grey;
+    		border-radius: 10px;
+    		text-align: center;
+   			}
+
+   		#button {
+   			background-color: grey;
+   			width: 320px;
+   			height: 500px;
+   			border: 10px solid grey;
+   			border-radius: 40px;
+   			position: absolute;
+   			right: 30%;
+   		}
+
+   		#num1 {
+   			position: absolute;
+   			left: 10px;
+   			top: 300px;
+   			
+   		}
+
+   		#num2 {
+   			position: absolute;
+   			left: 110px;
+   			top: 300px;
+   			
+   		}
+
+   		#num3 {
+   			position: absolute;
+   			left: 210px;
+   			top: 300px;
+   			
+   		}
+   		#num4 {
+   			position: absolute;
+   			left: 10px;
+   			top: 350px;
+   			
+   		}
+
+   		#num5 {
+   			position: absolute;
+   			left: 110px;
+   			top: 350px;
+   			
+   		}
+
+   		#num6 {
+   			position: absolute;
+   			left: 210px;
+   			top: 350px;
+   			
+   		}
+   		#num7 {
+   			position: absolute;
+   			left: 10px;
+   			top: 400px;
+   			
+   		}
+
+   		#num8 {
+   			position: absolute;
+   			left: 110px;
+   			top: 400px;
+   			
+   		}
+   		#num9 {
+   			position: absolute;
+   			left: 210px;
+   			top: 400px;
+   			
+   		}
+   		#msg {
+   			position: absolute;
+   			left: 10px;
+   			top: 10px;
+   			width: 300px;
+   			height: 280px;
+   			color: black;
+   			background-color: white;
+   			border-radius: 20px;
+   			font-size: 25px;
+   		}
+
+
+
+    </style>
+</head>
+<body>
+	<div id="button">
+		<section id="msg">some text</section>
+		<button id="num1" class="clock">1</button>
+		<button id="num2" class="clock">2</button>
+		<button id="num3" class="clock">3</button>
+		<button id="num4" class="clock">4</button>
+		<button id="num5" class="clock">5</button>
+		<button id="num6" class="clock">6</button>
+		<button id="num7" class="clock">7</button>
+		<button id="num8" class="clock">8</button>
+		<button id="num9" class="clock">9</button>
+	</div>
+
+
+<script>
+	window.onload = init
+
+		var num1 = document.querySelector('#num1');
+		var num2 = document.querySelector('#num2');
+		var num3 = document.querySelector('#num3');
+		var num4 = document.querySelector('#num4');
+		var num5 = document.querySelector('#num5');
+		var num6 = document.querySelector('#num6');
+		var num7 = document.querySelector('#num7');
+		var num8 = document.querySelector('#num8');
+		var num9 = document.querySelector('#num9');
+		var msg = document.querySelector('#msg');
+
+
+	function init() {
+		
+		num1.onclick = myAntiClock;
+		num2.onclick = myAntiClock;
+		num3.onclick = myAntiClock;
+		num4.onclick = myAntiClock;
+		num5.onclick = myFunction;
+		num6.onclick = myAntiClock;
+		num7.onclick = myAntiClock;
+		num8.onclick = myAntiClock;
+		num9.onclick = myAntiClock;
+		msg.innerHTML = " <p>Press <b>button '5'</b> to rotate the outer buttons clockwise.</p> <p>Press the <b>other buttons</b> to rotate them anticlockwise</p>";
+
+	};
+		
+
+	function myFunction() {
+		var A1 = num1.innerHTML;
+		var A2 = num2.innerHTML;
+		var A3 = num3.innerHTML;
+		var A4 = num4.innerHTML;
+		var A6 = num6.innerHTML;
+		var A7 = num7.innerHTML;
+		var A8 = num8.innerHTML;
+		var A9 = num9.innerHTML;
+
+		num1.innerHTML = A4;
+		num2.innerHTML = A1;
+		num3.innerHTML = A2;
+		num4.innerHTML = A7;
+		num6.innerHTML = A3;
+		num7.innerHTML = A8;
+		num8.innerHTML = A9;
+		num9.innerHTML = A6;
+		msg.innerHTML = " <p>Rotating <b>Clockwise</b></p>";
+	};
+
+
+
+	
+	function myAntiClock() {
+		var A1 = num1.innerHTML;
+		var A2 = num2.innerHTML;
+		var A3 = num3.innerHTML;
+		var A4 = num4.innerHTML;
+		var A6 = num6.innerHTML;
+		var A7 = num7.innerHTML;
+		var A8 = num8.innerHTML;
+		var A9 = num9.innerHTML;
+
+		num1.innerHTML = A2;
+		num2.innerHTML = A3;
+		num3.innerHTML = A6;
+		num4.innerHTML = A1;
+		num6.innerHTML = A9;
+		num7.innerHTML = A4;
+		num8.innerHTML = A7;
+		num9.innerHTML = A8;
+		msg.innerHTML = " <p>Rotating <b>Anticlockwise</b></p>";
+	};
+
+</script>
+</body>
